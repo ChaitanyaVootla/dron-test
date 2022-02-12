@@ -6,14 +6,12 @@ steps:
 - name: backend
   image: golang
   commands:
-  - go build
-  - go test
+  - go
 
 - name: frontend
   image: node
   commands:
-  - npm install
-  - npm test
+  - node -v
 
 - name: notify
   image: plugins/slack
