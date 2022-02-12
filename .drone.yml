@@ -14,10 +14,9 @@ steps:
   - node -v
 
 - name: notify
-  image: plugins/slack
-  settings:
-    webhook:
-      from_secret: webhook
+  image: node
   depends_on:
   - frontend
   - backend
+  commands:
+  - node -v
